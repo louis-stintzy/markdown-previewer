@@ -3,6 +3,8 @@ import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
+import airbnb from 'eslint-config-airbnb';
+import airbnbTypescript from 'eslint-config-airbnb-typescript';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
@@ -15,6 +17,8 @@ export default tseslint.config(
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
+      airbnb,
+      airbnbTypescript,
       'plugin:react/recommended',
       'plugin:prettier/recommended',
       prettier,
